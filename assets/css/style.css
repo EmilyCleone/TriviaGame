@@ -1,0 +1,19 @@
+body{
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/r4o_3OMviqjjnpmn/videoblocks-retro-futuristic-80s-synth-wave-sun-grid-background-perfectly-seamless-looped-opener-animation_rzswwvs27_thumbnail-full01.png);
+}
+
+.container{
+    width: 650px;
+    height: 630px;
+    opacity: 0.5;
+    background-color: aliceblue;
+    margin: 0 auto;
+    margin-top: -40px;
+}
+
+#textInContainer{
+    color: black;
+    font-size: 50px;
+    font-family: fantasy;
+    text-align: center;
+}
