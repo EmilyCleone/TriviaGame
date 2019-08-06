@@ -1,6 +1,11 @@
 $(document).ready(function () {
 
-  $(".buttonContainer").hide();
+  $(".buttonContainer0").hide();
+  $(".buttonContainer1").hide();
+  $(".buttonContainer2").hide();
+  $(".buttonContainer3").hide();
+  $(".buttonContainer4").hide();
+  $(".buttonContainer5").hide();
   $("#time-left").hide();
   //questions array will contain multiple objects that hold the questions and answers.
   var questions = [{
@@ -25,7 +30,7 @@ $(document).ready(function () {
     },
     {
       prompt: "Who was the lead singer of the Talking Heads?",
-      choices: ["David Byrnes", "Robert Smith", "Morrissey"],
+      choices: ["David Byrne", "Robert Smith", "Morrissey"],
       answer: 0
     },
     {
@@ -36,27 +41,41 @@ $(document).ready(function () {
 
   ];
 
-  function iterateThroughArray() {
-    for (i = 0; i < 7; i++)
-    //change to questions.length
-    {
-      document.getElementById("questionsBox").innerHTML = questions[i];
-    }
-    document.write("end of loop");
-    //add number of answers correct and inccorrect
-  }
+  // function iterateThroughArray() {
+  //   for (i = 0; i < 7; i++)
+  //   //change to questions.length
+  //   {
+  //     document.getElementById("questionsBox").innerHTML = questions[i];
+  //   }
+  //   document.write("end of loop");
+  //   //add number of answers correct and inccorrect
+  // }
 
   //this will show the correct and incorrect answers
   var correctAnswers = 0;
   var incorrectAnswers = 0;
   var unanswered = 0;
- 
+  
+  var term;
+  var records;
+  var start;
+  var end;
+
+  term=$("#searchTerm").val();
+  records=$("#recordsToRecieve").val();
+  start=$("#startYear").val();
+  end=$("#endYear").val();
 
 
   $("#startButton").on("click", function () {
     $("#startButton").hide();
-    $(".buttonContainer").show();
-    //$("#questionsBox").html(); //= questions.prompt;
+    $(".buttonContainer0").show();
+    $(".buttonContainer1").show();
+    $(".buttonContainer2").show();
+    $(".buttonContainer3").show();
+    $(".buttonContainer4").show();
+    $(".buttonContainer5").show();
+
     document.getElementById("questionsBox0").innerHTML = questions[0].prompt;
     document.getElementById("questionsBox1").innerHTML = questions[1].prompt;
     document.getElementById("questionsBox2").innerHTML = questions[2].prompt;
@@ -72,7 +91,7 @@ $(document).ready(function () {
 });
 
 
-var timeLeft = 20;
+var timeLeft = 120;
 var elem = document.getElementById('time-left');
 
 var timerId = setInterval(countdown, 1000);
