@@ -7,10 +7,11 @@ $(document).ready(function () {
   $(".buttonContainer4").hide();
   $(".buttonContainer5").hide();
   $("#time-left").hide();
+  $("#submit").hide();
   //questions array will contain multiple objects that hold the questions and answers.
   var questions = [{
       prompt: "Which 1980s US president survived an assassination attempt?",
-      choices: ["Jimmy Carter", "Ronald Reagan", "George Bush"],
+      choices: ["Jimmy Carter", "Ronald Reagan","George Bush"],
       answer: 1
     },
     {
@@ -51,20 +52,43 @@ $(document).ready(function () {
   //   //add number of answers correct and inccorrect
   // }
 
+
   //this will show the correct and incorrect answers
   var correctAnswers = 0;
   var incorrectAnswers = 0;
   var unanswered = 0;
-  
-  var term;
-  var records;
-  var start;
-  var end;
 
-  term=$("#searchTerm").val();
-  records=$("#recordsToRecieve").val();
-  start=$("#startYear").val();
-  end=$("#endYear").val();
+
+  // var term;
+  // var records;
+  // var start;
+  // var end;
+
+  // term=$("#searchTerm").val();
+  // records=$("#recordsToRecieve").val();
+  // start=$("#startYear").val();
+  // end=$("#endYear").val();
+
+  $('#row1 input').on('change', function() {
+    console.log($('input[name=presidents]:checked', '#row1').val()); 
+ });
+ $('#row2 input').on('change', function() {
+    console.log($('input[name=movies]:checked', '#row2').val()); 
+ });
+ $('#row3 input').on('change', function() {
+  console.log($('input[name=wonderYears]:checked', '#row3').val()); 
+});
+$('#row4 input').on('change', function() {
+  console.log($('input[name=hairStyle]:checked', '#row4').val()); 
+});
+$('#row5 input').on('change', function() {
+  console.log($('input[name=talkingHeads]:checked', '#row5').val()); 
+});
+$('#row6 input').on('change', function() {
+  console.log($('input[name=pacman]:checked', '#row6').val()); 
+});
+
+
 
 
   $("#startButton").on("click", function () {
@@ -85,12 +109,18 @@ $(document).ready(function () {
 
     $("#questionsBox").show();
     $("#time-left").show();
+    $("#submit").show();
   });
 
 
 });
 
 
+
+
+
+
+//countdown timer displayed on screen
 var timeLeft = 120;
 var elem = document.getElementById('time-left');
 
