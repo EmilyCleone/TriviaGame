@@ -114,16 +114,24 @@ a4=$("#mullet").val();
 a5=$("#davidByrne").val();
 a6=$("#japan").val();
 
-// $("#submitButton").on("click", function () {
-//   $("#submitButton").hide();
-//   $(".buttonContainer0").hide();
-//   $(".buttonContainer1").hide();
-//   $(".buttonContainer2").hide();
-//   $(".buttonContainer3").hide();
-//   $(".buttonContainer4").hide();
-//   $(".buttonContainer5").hide();
-//   $(".scoreBox").show();
-// }
+$("#submitButton").on("click", function () {
+  $("#submitButton").hide();
+  $("#time-left").hide();
+  $("#startButton").hide();
+  $("#questionsBox0").hide();
+  $("#questionsBox1").hide();
+  $("#questionsBox2").hide();
+  $("#questionsBox3").hide();
+  $("#questionsBox4").hide();
+  $("#questionsBox5").hide();
+  $(".buttonContainer0").hide();
+  $(".buttonContainer1").hide();
+  $(".buttonContainer2").hide();
+  $(".buttonContainer3").hide();
+  $(".buttonContainer4").hide();
+  $(".buttonContainer5").hide();
+  $(".scoreBox").show();
+});
 
 
 // function checkWinLose(){
