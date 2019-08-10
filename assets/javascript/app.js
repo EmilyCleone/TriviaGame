@@ -1,5 +1,11 @@
-$(document).ready(function () {
+//declare variables
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+var unanswered = 0;
 
+
+$(document).ready(function () {
+//hides buttons until start button is pressed
   $(".buttonContainer0").hide();
   $(".buttonContainer1").hide();
   $(".buttonContainer2").hide();
@@ -7,7 +13,10 @@ $(document).ready(function () {
   $(".buttonContainer4").hide();
   $(".buttonContainer5").hide();
   $("#time-left").hide();
-  $("#submit").hide();
+  $("#submitButton").hide();
+  $(".scoreBox").hide();
+
+
   //questions array will contain multiple objects that hold the questions and answers.
   var questions = [{
       prompt: "Which 1980s US president survived an assassination attempt?",
@@ -42,34 +51,8 @@ $(document).ready(function () {
 
   ];
 
-  // function iterateThroughArray() {
-  //   for (i = 0; i < 7; i++)
-  //   //change to questions.length
-  //   {
-  //     document.getElementById("questionsBox").innerHTML = questions[i];
-  //   }
-  //   document.write("end of loop");
-  //   //add number of answers correct and inccorrect
-  // }
-
-
-  //this will show the correct and incorrect answers
-  var correctAnswers = 0;
-  var incorrectAnswers = 0;
-  var unanswered = 0;
-
-
-  // var term;
-  // var records;
-  // var start;
-  // var end;
-
-  // term=$("#searchTerm").val();
-  // records=$("#recordsToRecieve").val();
-  // start=$("#startYear").val();
-  // end=$("#endYear").val();
-
-  $('#row1 input').on('change', function() {
+//logs the value of each check button for each question. The values marked in html are set as "correct" or "incorrect"
+ $('#row1 input').on('change', function() {
     console.log($('input[name=presidents]:checked', '#row1').val()); 
  });
  $('#row2 input').on('change', function() {
@@ -90,7 +73,7 @@ $('#row6 input').on('change', function() {
 
 
 
-
+//shows buttons, questions, timer, and submit button upon pressing start, hiding the start button.
   $("#startButton").on("click", function () {
     $("#startButton").hide();
     $(".buttonContainer0").show();
@@ -109,16 +92,45 @@ $('#row6 input').on('change', function() {
 
     $("#questionsBox").show();
     $("#time-left").show();
-    $("#submit").show();
+    $("#submitButton").show();
   });
-
+  
 
 });
 
 
+var a1;
+var a2;
+var a3;
+var a4;
+var a5;
+var a6;
 
 
+a1=$("#ronaldReagan").val();
+a2=$("#E-T").val();
+a3=$("#winnie").val();
+a4=$("#mullet").val();
+a5=$("#davidByrne").val();
+a6=$("#japan").val();
 
+// $("#submitButton").on("click", function () {
+//   $("#submitButton").hide();
+//   $(".buttonContainer0").hide();
+//   $(".buttonContainer1").hide();
+//   $(".buttonContainer2").hide();
+//   $(".buttonContainer3").hide();
+//   $(".buttonContainer4").hide();
+//   $(".buttonContainer5").hide();
+//   $(".scoreBox").show();
+// }
+
+
+// function checkWinLose(){
+//  for (var i=0; i<questions.length; i++)
+//    if ()
+
+// };
 
 //countdown timer displayed on screen
 var timeLeft = 120;

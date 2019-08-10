@@ -20,13 +20,13 @@
     <div id="questionsBox0"></div>
     <div class="buttonContainer0 btn-group btn-group-toggle" data-toggle="buttons" id="row1">
         <label class="btn btn-light active">
-            <input type="radio" name="presidents" value="0" id="jimmyCarter" autocomplete="off"> Jimmy Carter
+            <input type="radio" name="presidents" value="incorrect" id="jimmyCarter" autocomplete="off"> Jimmy Carter
           </label>
           <label class="btn btn-light">
-            <input type="radio" name="presidents" value="1" id="ronaldReagan" autocomplete="off"> Ronald Reagan
+            <input type="radio" name="presidents" value="correct" id="ronaldReagan" autocomplete="off"> Ronald Reagan
           </label>
           <label class="btn btn-light">
-            <input type="radio" name="presidents" value="2" id="georgeBush" autocomplete="off"> George Bush
+            <input type="radio" name="presidents" value="incorrect" id="georgeBush" autocomplete="off"> George Bush
           </label>
     </div>
 
@@ -34,13 +34,13 @@
   <div id="questionsBox1"></div>
   <div class="buttonContainer1 btn-group btn-group-toggle" data-toggle="buttons" id="row2">
       <label class="btn btn-light active">
-          <input type="radio" name="movies" value="0" id="E-T" autocomplete="off"> E.T. The Extraterrestrial
+          <input type="radio" name="movies" value="correct" id="E-T" autocomplete="off"> E.T. The Extraterrestrial
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="movies" value="1" id="backToTheFuture" autocomplete="off"> Back to the Future
+          <input type="radio" name="movies" value="incorrect" id="backToTheFuture" autocomplete="off"> Back to the Future
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="movies" value="2" id="starWars" autocomplete="off"> Star Wars
+          <input type="radio" name="movies" value="incorrect" id="starWars" autocomplete="off"> Star Wars
         </label>
   </div>
 
@@ -49,13 +49,13 @@
   <div class="buttonContainer2 btn-group btn-group-toggle" data-toggle="buttons" id="row3">
 
       <label class="btn btn-light active">
-          <input type="radio" name="wonderYears" value="0" id="whitney" autocomplete="off"> Whitney
+          <input type="radio" name="wonderYears" value="incorrect" id="whitney" autocomplete="off"> Whitney
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="wonderYears" value="1" id="wendy" autocomplete="off"> Wendy
+          <input type="radio" name="wonderYears" value="incorrect" id="wendy" autocomplete="off"> Wendy
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="wonderYears" value="2" id="winnie" autocomplete="off"> Winnie
+          <input type="radio" name="wonderYears" value="correct" id="winnie" autocomplete="off"> Winnie
         </label>
   </div>
 
@@ -63,13 +63,13 @@
   <div id="questionsBox3"></div>
   <div class="buttonContainer3 btn-group btn-group-toggle" data-toggle="buttons" id="row4">
       <label class="btn btn-light active">
-          <input type="radio" name="hairStyle" value="0" id="mullet" autocomplete="off"> Mullet
+          <input type="radio" name="hairStyle" value="correct" id="mullet" autocomplete="off"> Mullet
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="hairStyle" value="1" id="pixieCut" autocomplete="off"> Pixie Cut
+          <input type="radio" name="hairStyle" value="incorrect" id="pixieCut" autocomplete="off"> Pixie Cut
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="hairStyle" value="2" id="underCut" autocomplete="off"> Undercut
+          <input type="radio" name="hairStyle" value="incorrect" id="underCut" autocomplete="off"> Undercut
         </label>
   </div>
 
@@ -77,36 +77,40 @@
   <div id="questionsBox4"></div>
   <div class="buttonContainer4 btn-group btn-group-toggle" data-toggle="buttons" id="row5">
       <label class="btn btn-light active">
-          <input type="radio" name="talkingHeads" value="0" id="davidByrne" autocomplete="off"> David Bryne
+          <input type="radio" name="talkingHeads" value="correct" id="davidByrne" autocomplete="off"> David Bryne
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="talkingHeads" value="1" id="robertSmith" autocomplete="off"> Robert Smith
+          <input type="radio" name="talkingHeads" value="incorrect" id="robertSmith" autocomplete="off"> Robert Smith
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="talkingHeads" value="2" id="morrissey" autocomplete="off"> Morrissey
+          <input type="radio" name="talkingHeads" value="incorrect" id="morrissey" autocomplete="off"> Morrissey
         </label>
   </div>
 
 
   <div id="questionsBox5"></div>
-  <div class="buttonContainer5 btn-group btn-group-toggle" data-toggle="buttons" id="row5">
+  <div class="buttonContainer5 btn-group btn-group-toggle" data-toggle="buttons" id="row6">
       <label class="btn btn-light active">
-          <input type="radio" name="pacman" value="0" id="america" autocomplete="off"> America
+          <input type="radio" name="pacman" value="incorrect" id="america" autocomplete="off"> America
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="pacman" value="1" id="japan" autocomplete="off"> Japan
+          <input type="radio" name="pacman" value="correct" id="japan" autocomplete="off"> Japan
         </label>
         <label class="btn btn-light">
-          <input type="radio" name="pacman" value="2" id="china" autocomplete="off"> China
+          <input type="radio" name="pacman" value="incorrect" id="china" autocomplete="off"> China
         </label>
   </div>
 
   
-  <div class ="scoreBox"></div>
+  <div class ="scoreBox">
+    <p>Correct Answers: <span id="correct">0</span></p>
+    <p>Incorrect Answers: <span id="incorrect">0</span></p>
+    <p>Unanswered Questions: <span id="unanswered">0</span></p>
+  </div>
   <button id="startButton">Start</button>
   <div id="results"></div>
-  <footer>
-  <button id ="submit" type="button" class="btn btn-secondary btn-lg btn-block">Submit Answers</button>
+  
+  <button id ="submitButton" type="button" class="btn btn-secondary btn-lg btn-block">Submit Answers</button>
   
 
 
