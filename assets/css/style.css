@@ -64,3 +64,7 @@ body{
     margin-top: 40px;
     
   }
+  .scoreBox{
+    color:yellow;
+    font-size: 18px;
+  }
